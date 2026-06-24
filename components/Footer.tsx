@@ -1,4 +1,4 @@
-import { MessageCircle, Instagram, MapPin, Mail } from "lucide-react";
+import { MessageCircle, Instagram, MapPin } from "lucide-react";
 import { site, nav } from "@/lib/site";
 
 export default function Footer() {
@@ -85,15 +85,6 @@ export default function Footer() {
                   className="transition-colors hover:text-white"
                 >
                   {site.whatsapp.display}
-                </a>
-              </li>
-              <li className="flex gap-2.5">
-                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-volt" />
-                <a
-                  href={`mailto:${site.email}`}
-                  className="transition-colors hover:text-white"
-                >
-                  {site.email}
                 </a>
               </li>
             </ul>

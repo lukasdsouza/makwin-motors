@@ -30,7 +30,6 @@ export const site = {
     handle: "@makwin.motors",
     url: "https://www.instagram.com/makwin.motors/",
   },
-  email: "contato@makwinmotors.com.br",
 
   address: {
     line1: "Av. das Américas, 12.700 – Loja SS111",
@@ -41,8 +40,7 @@ export const site = {
   },
 
   hours: [
-    { day: "Segunda a Sexta", time: "09h – 19h" },
-    { day: "Sábado", time: "09h – 17h" },
+    { day: "Segunda a Sábado", time: "10h – 18h" },
     { day: "Domingo", time: "Sob agendamento" },
   ],
 } as const;
@@ -316,3 +314,88 @@ export const faqs = [
     a: "Enviamos para todo o Rio através de transportadoras parceiras, com segurança e acompanhamento até a entrega.",
   },
 ] as const;
+
+/**
+ * Monta um link do WhatsApp já com a mensagem citando o modelo.
+ * Use em cards, modelos e no test-drive.
+ */
+export function whatsappFor(modelName: string, extra?: string) {
+  const msg = `Olá! Vim pelo site e tenho interesse na ${modelName}.${
+    extra ? " " + extra : ""
+  } Pode me passar valores, condições e disponibilidade?`;
+  return `https://wa.me/${site.whatsapp.number}?text=${encodeURIComponent(msg)}`;
+}
+
+/** Números de prova social — ajuste conforme os dados reais da loja. */
+export const socialStats = {
+  delivered: 600,
+  rating: 4.9,
+  reviews: 90,
+} as const;
+
+/** Depoimentos — substitua pelos reais quando tiver. */
+export const testimonials = [
+  {
+    name: "Rafael M.",
+    text: "Comprei a Apollo e uso todo dia pra trabalhar na Barra. Economia absurda e o atendimento da loja foi nota 10.",
+    rating: 5,
+  },
+  {
+    name: "Juliana S.",
+    text: "Fiz o test-drive na loja e me apaixonei. Sem CNH, sem burocracia e super fácil de carregar em casa.",
+    rating: 5,
+  },
+  {
+    name: "Carlos E.",
+    text: "Entrega rápida e a scooter veio impecável. A Tank tem uma presença incrível na rua. Recomendo demais.",
+    rating: 5,
+  },
+  {
+    name: "Marina A.",
+    text: "Atendimento humano de verdade, me ajudaram a escolher o modelo certo pra minha rotina. Virei cliente fã.",
+    rating: 5,
+  },
+  {
+    name: "Pedro H.",
+    text: "Melhor custo-benefício que achei no Rio. A bateria de lítio dura o dia todo de corre. Top!",
+    rating: 5,
+  },
+] as const;
+
+/** Fotos reais de clientes (pasta public/clientes) para a prova social. */
+export const clientes: string[] = [
+  "/clientes/20251127_163039.jpg",
+  "/clientes/20251228_122329.jpg",
+  "/clientes/20260105_181121.jpg",
+  "/clientes/20260108_170825.jpg",
+  "/clientes/20260109_175705.jpg",
+  "/clientes/20260113_163401.jpg",
+  "/clientes/20260117_151217.jpg",
+  "/clientes/20260206_194714.jpg",
+  "/clientes/20260214_192046.jpg",
+  "/clientes/20260223_164414.jpg",
+  "/clientes/20260305_104700.jpg",
+  "/clientes/20260311_105911.jpg",
+  "/clientes/20260507_122148.jpg",
+  "/clientes/20260509_173236.jpg",
+  "/clientes/20260516_114059.jpg",
+  "/clientes/20260530_115138.jpg",
+  "/clientes/20260601_112253.jpg",
+  "/clientes/20260604_144957.jpg",
+  "/clientes/20260611_134533.jpg",
+  "/clientes/20260613_183352.jpg",
+  "/clientes/20260618_154323.jpg",
+  "/clientes/20260618_190833.jpg",
+  "/clientes/20260619_115831.jpg",
+  "/clientes/lv_0_20251128123649.jpg",
+];
+
+/** Destaques do Instagram (grade da seção de feed). */
+export const instagramPosts: string[] = [
+  "/clientes/20260117_151217.jpg",
+  "/clientes/20260619_115831.jpg",
+  "/clientes/20260311_105911.jpg",
+  "/clientes/20260530_115138.jpg",
+  "/clientes/20260109_175705.jpg",
+  "/clientes/20260618_190833.jpg",
+];

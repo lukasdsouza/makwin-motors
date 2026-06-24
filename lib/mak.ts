@@ -1,5 +1,5 @@
 /**
- * Registro do mascote MAK (Makwin LED Rider).
+ * Registro do mascote MAK.
  * Cada pose é um PNG com fundo transparente em /public/mak.
  * Os easter eggs mapeiam gatilhos de UX a poses.
  */
@@ -32,5 +32,4 @@ export const makPoses: Record<MakPose, string> = {
 
 export const mak = {
   name: "MAK",
-  fullName: "Makwin LED Rider",
 };

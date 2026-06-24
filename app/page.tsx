@@ -1,11 +1,17 @@
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
+import HeroInstitucional from "@/components/HeroInstitucional";
 import TrustBar from "@/components/TrustBar";
-import Differentials from "@/components/Differentials";
+import Institucional from "@/components/Institucional";
 import Models from "@/components/Models";
-import Comparator from "@/components/Comparator";
+import ScooterVideos from "@/components/ScooterVideos";
+import MakShowcase from "@/components/MakShowcase";
+import SocialProof from "@/components/SocialProof";
+import Differentials from "@/components/Differentials";
 import HowItWorks from "@/components/HowItWorks";
+import TestDrive from "@/components/TestDrive";
+import Comparator from "@/components/Comparator";
 import FAQ from "@/components/FAQ";
+import InstagramFeed from "@/components/InstagramFeed";
 import Location from "@/components/Location";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -16,13 +22,19 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <Hero />
+        <HeroInstitucional />
         <TrustBar />
-        <Differentials />
+        <Institucional />
         <Models />
-        <Comparator />
+        <ScooterVideos />
+        <MakShowcase />
+        <SocialProof />
+        <Differentials />
         <HowItWorks />
+        <TestDrive />
+        <Comparator />
         <FAQ />
+        <InstagramFeed />
         <Location />
         <FinalCTA />
       </main>
